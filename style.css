@@ -41,18 +41,18 @@ body {
   flex: 0 0 250px;
 }*/
 
-.hero-image {
+/*.hero-image {
   width: 250px;
   flex: 0 0 250px;
   margin-top: 30px;
-}
+}*/
 
-./*hero-image {
+.hero-image {
   width: 250px;
   flex: 0 0 250px;
   position: relative;
   top: 35px;
-}*/
+}
 
 .hero-image img {
   width: 100%;
