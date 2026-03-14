@@ -63,7 +63,7 @@ a:focus {
 .profile-pic {
   border-radius: 8px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
-  margin-top: -10px;
+  margin-top: 10px;
   transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
 }
 
@@ -75,16 +75,13 @@ a:focus {
 /* Links row */
 .links {
   margin-top: 14px;
+  margin-bottom: 0;
   text-align: center;
-  font-size: 14px; /* pipe size stays small */
+  font-size: 14px;
 }
 
 .links a {
-  font-size: 16px; /* only the link text gets bigger */
-}
-
-p.links {
-  margin-bottom: 0;
+  font-size: 14px;
 }
 
 /* Divider */
@@ -131,7 +128,7 @@ li {
   font-size: 12px;
 }
 
-/* Mobile */
+/* ── Mobile ── */
 @media (max-width: 760px) {
   body {
     font-size: 13px;
@@ -139,22 +136,6 @@ li {
 
   .page {
     padding: 24px 16px 40px;
-  }
-
-  /* Stack the header table on mobile */
-  table tr {
-    display: block;
-  }
-
-  table td {
-    display: block;
-    width: 100% !important;
-    text-align: center;
-  }
-
-  .profile-pic {
-    margin: 0 auto 20px;
-    display: block;
   }
 
   h1 {
@@ -165,16 +146,36 @@ li {
     font-size: 17px;
   }
 
-  p, a, td, th, tr, li, .item-title, strong {
+  p, a, li, .item-title, strong {
     font-size: 13px;
   }
 
-  /* Logo table — smaller on mobile */
-  table td img {
-    height: 35px !important;
+  /* Header table: stack photo above text */
+  table.header-table tr {
+    display: flex;
+    flex-direction: column-reverse;
   }
 
-  table td img[alt="AWS"] {
-    height: 25px !important;
+  table.header-table td {
+    display: block;
+    width: 100% !important;
+    text-align: center;
+  }
+
+  .profile-pic {
+    width: 180px !important;
+    height: auto !important;
+    margin: 0 auto 16px;
+    display: block;
+  }
+
+  /* Logo table: stay in a row, smaller images */
+  table.logo-table tr,
+  table.logo-table td {
+    display: table-cell;
+  }
+
+  table.logo-table td img {
+    height: 28px !important;
   }
 }
