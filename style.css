@@ -170,12 +170,35 @@ li {
   }
 
   /* Logo table: stay in a row, smaller images */
-  table.logo-table tr,
+/*  table.logo-table tr,
   table.logo-table td {
     display: table-cell;
   }
 
   table.logo-table td img {
     height: 28px !important;
+  }*/
+
+    table.logo-table {
+    display: block;
   }
+
+  table.logo-table tr {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  table.logo-table td {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+  }
+
+  table.logo-table td img {
+    height: 36px !important;
+  }
+
 }
